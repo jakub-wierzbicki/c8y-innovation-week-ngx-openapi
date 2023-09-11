@@ -38,7 +38,6 @@ import { UsersService } from './services/users.service';
 import { GroupsService } from './services/groups.service';
 import { MeasurementApiService } from './services/measurement-api.service';
 import { MeasurementsService } from './services/measurements.service';
-import { Notification20ApiService } from './services/Notification 2/notification-20-api.service';
 import { TokensService } from './services/tokens.service';
 import { SubscriptionsService } from './services/subscriptions.service';
 import { RealTimeNotificationApiService } from './services/real-time-notification-api.service';
@@ -96,7 +95,6 @@ import { SystemOptionsService } from './services/system-options.service';
     GroupsService,
     MeasurementApiService,
     MeasurementsService,
-    Notification20ApiService,
     TokensService,
     SubscriptionsService,
     RealTimeNotificationApiService,
@@ -127,7 +125,7 @@ export class ApiModule {
     }
   }
 
-  constructor( 
+  constructor(
     @Optional() @SkipSelf() parentModule: ApiModule,
     @Optional() http: HttpClient
   ) {

@@ -32,7 +32,6 @@ export { UsersService } from './services/users.service';
 export { GroupsService } from './services/groups.service';
 export { MeasurementApiService } from './services/measurement-api.service';
 export { MeasurementsService } from './services/measurements.service';
-export { Notification20ApiService } from './services/Notification 2/notification-20-api.service';
 export { TokensService } from './services/tokens.service';
 export { SubscriptionsService } from './services/subscriptions.service';
 export { RealTimeNotificationApiService } from './services/real-time-notification-api.service';
