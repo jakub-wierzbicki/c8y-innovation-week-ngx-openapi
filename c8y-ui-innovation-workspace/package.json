@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "gen-api": "npx rimraf projects/ngx-c8y-openapi-library/src/api && npx ng-openapi-gen --input https://cumulocity.com/api/core/10.18.0/dist/c8y-oas.json --output ./projects/ngx-c8y-openapi-library/src/api"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +35,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^16.2.0",
-    "typescript": "~5.1.3"
+    "typescript": "~5.1.3",
+    "ng-openapi-gen": "^0.50.2"
   }
 }
