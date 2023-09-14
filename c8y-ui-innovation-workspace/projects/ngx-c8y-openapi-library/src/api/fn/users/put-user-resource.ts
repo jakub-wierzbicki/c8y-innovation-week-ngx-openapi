@@ -26,6 +26,7 @@ export interface PutUserResource$Params {
   Accept?: string;
       body: User & {
 'userName'?: any;
+'devicePermissions'?: any;
 }
 }
 

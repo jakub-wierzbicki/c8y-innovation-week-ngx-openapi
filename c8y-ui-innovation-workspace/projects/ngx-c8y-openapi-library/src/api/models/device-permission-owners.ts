@@ -6,7 +6,7 @@ import { User } from '../models/user';
 /**
  * A list of device permissions.
  */
-export interface DevicePermissions {
+export interface DevicePermissionOwners {
   groups?: Array<Group>;
   users?: Array<User>;
 }

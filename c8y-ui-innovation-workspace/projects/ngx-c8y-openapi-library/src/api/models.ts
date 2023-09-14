@@ -52,7 +52,7 @@ export { DescTenantId } from './models/desc-tenant-id';
 export { DescUserDevicepermissions } from './models/desc-user-devicepermissions';
 export { DeviceControlApiResource } from './models/device-control-api-resource';
 export { DeviceCredentials } from './models/device-credentials';
-export { DevicePermissions } from './models/device-permissions';
+export { DevicePermissionOwners } from './models/device-permission-owners';
 export { DeviceStatistics } from './models/device-statistics';
 export { DeviceStatisticsCollection } from './models/device-statistics-collection';
 export { Error } from './models/error';
@@ -139,6 +139,7 @@ export { TenantUsageStatisticsCollection } from './models/tenant-usage-statistic
 export { TenantUsageStatisticsFileCollection } from './models/tenant-usage-statistics-file-collection';
 export { TrustedCertificate } from './models/trusted-certificate';
 export { TrustedCertificateCollection } from './models/trusted-certificate-collection';
+export { UpdatedDevicePermissions } from './models/updated-device-permissions';
 export { UploadedTrustedCertificate } from './models/uploaded-trusted-certificate';
 export { UploadedTrustedCertificateCollection } from './models/uploaded-trusted-certificate-collection';
 export { UploadedTrustedCertSignedVerificationCode } from './models/uploaded-trusted-cert-signed-verification-code';

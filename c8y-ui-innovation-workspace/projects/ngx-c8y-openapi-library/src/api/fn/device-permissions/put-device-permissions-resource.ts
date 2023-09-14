@@ -6,7 +6,7 @@ import { filter, map } from 'rxjs/operators';
 import { StrictHttpResponse } from '../../strict-http-response';
 import { RequestBuilder } from '../../request-builder';
 
-import { DevicePermissions } from '../../models/device-permissions';
+import { UpdatedDevicePermissions } from '../../models/updated-device-permissions';
 
 export interface PutDevicePermissionsResource$Params {
 
@@ -19,7 +19,7 @@ export interface PutDevicePermissionsResource$Params {
  * Unique identifier of the managed object.
  */
   id: string;
-      body: DevicePermissions
+      body: UpdatedDevicePermissions
 }
 
 export function putDevicePermissionsResource(http: HttpClient, rootUrl: string, params: PutDevicePermissionsResource$Params, context?: HttpContext): Observable<StrictHttpResponse<void>> {

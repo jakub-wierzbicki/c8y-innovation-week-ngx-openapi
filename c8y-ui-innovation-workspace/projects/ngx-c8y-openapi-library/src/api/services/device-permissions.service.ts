@@ -9,7 +9,7 @@ import { BaseService } from '../base-service';
 import { ApiConfiguration } from '../api-configuration';
 import { StrictHttpResponse } from '../strict-http-response';
 
-import { DevicePermissions } from '../models/device-permissions';
+import { DevicePermissionOwners } from '../models/device-permission-owners';
 import { getDevicePermissionsResource } from '../fn/device-permissions/get-device-permissions-resource';
 import { GetDevicePermissionsResource$Params } from '../fn/device-permissions/get-device-permissions-resource';
 import { putDevicePermissionsResource } from '../fn/device-permissions/put-device-permissions-resource';
@@ -59,7 +59,7 @@ export class DevicePermissionsService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  getDevicePermissionsResource$Response(params: GetDevicePermissionsResource$Params, context?: HttpContext): Observable<StrictHttpResponse<DevicePermissions>> {
+  getDevicePermissionsResource$Response(params: GetDevicePermissionsResource$Params, context?: HttpContext): Observable<StrictHttpResponse<DevicePermissionOwners>> {
     return getDevicePermissionsResource(this.http, this.rootUrl, params, context);
   }
 
@@ -77,9 +77,9 @@ export class DevicePermissionsService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  getDevicePermissionsResource(params: GetDevicePermissionsResource$Params, context?: HttpContext): Observable<DevicePermissions> {
+  getDevicePermissionsResource(params: GetDevicePermissionsResource$Params, context?: HttpContext): Observable<DevicePermissionOwners> {
     return this.getDevicePermissionsResource$Response(params, context).pipe(
-      map((r: StrictHttpResponse<DevicePermissions>): DevicePermissions => r.body)
+      map((r: StrictHttpResponse<DevicePermissionOwners>): DevicePermissionOwners => r.body)
     );
   }
 

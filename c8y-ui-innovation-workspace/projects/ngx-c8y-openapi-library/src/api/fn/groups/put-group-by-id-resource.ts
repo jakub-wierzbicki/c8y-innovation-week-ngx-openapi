@@ -24,7 +24,9 @@ export interface PutGroupByIdResource$Params {
  * Advertises which content types, expressed as MIME types, the client is able to understand.
  */
   Accept?: string;
-      body: Group
+      body: Group & {
+'devicePermissions'?: any;
+}
 }
 
 export function putGroupByIdResource(http: HttpClient, rootUrl: string, params: PutGroupByIdResource$Params, context?: HttpContext): Observable<StrictHttpResponse<Group>> {

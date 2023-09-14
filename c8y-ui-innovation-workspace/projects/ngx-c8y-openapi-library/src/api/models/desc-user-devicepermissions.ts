@@ -7,4 +7,6 @@
  * @deprecated
  */
 export interface DescUserDevicepermissions {
+
+  [key: string]: Array<string>;
 }

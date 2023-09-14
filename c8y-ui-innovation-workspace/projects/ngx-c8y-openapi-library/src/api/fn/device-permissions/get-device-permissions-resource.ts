@@ -6,7 +6,7 @@ import { filter, map } from 'rxjs/operators';
 import { StrictHttpResponse } from '../../strict-http-response';
 import { RequestBuilder } from '../../request-builder';
 
-import { DevicePermissions } from '../../models/device-permissions';
+import { DevicePermissionOwners } from '../../models/device-permission-owners';
 
 export interface GetDevicePermissionsResource$Params {
 
@@ -16,7 +16,7 @@ export interface GetDevicePermissionsResource$Params {
   id: string;
 }
 
-export function getDevicePermissionsResource(http: HttpClient, rootUrl: string, params: GetDevicePermissionsResource$Params, context?: HttpContext): Observable<StrictHttpResponse<DevicePermissions>> {
+export function getDevicePermissionsResource(http: HttpClient, rootUrl: string, params: GetDevicePermissionsResource$Params, context?: HttpContext): Observable<StrictHttpResponse<DevicePermissionOwners>> {
   const rb = new RequestBuilder(rootUrl, getDevicePermissionsResource.PATH, 'get');
   if (params) {
     rb.path('id', params.id, {});
@@ -27,7 +27,7 @@ export function getDevicePermissionsResource(http: HttpClient, rootUrl: string, 
   ).pipe(
     filter((r: any): r is HttpResponse<any> => r instanceof HttpResponse),
     map((r: HttpResponse<any>) => {
-      return r as StrictHttpResponse<DevicePermissions>;
+      return r as StrictHttpResponse<DevicePermissionOwners>;
     })
   );
 }

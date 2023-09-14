@@ -19,7 +19,9 @@ export interface PostUserCollectionResource$Params {
  * Advertises which content types, expressed as MIME types, the client is able to understand.
  */
   Accept?: string;
-      body: User & any
+      body: User & {
+'devicePermissions'?: any;
+} & any
 }
 
 export function postUserCollectionResource(http: HttpClient, rootUrl: string, params: PostUserCollectionResource$Params, context?: HttpContext): Observable<StrictHttpResponse<User>> {
